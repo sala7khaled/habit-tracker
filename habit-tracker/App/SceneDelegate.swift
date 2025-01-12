@@ -18,9 +18,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         
-        let homeVC = HomeController()
+        var vc: UIViewController = LoginController()
+        if Shared.username != nil {
+            vc = HomeController()
+        }
         
-        window?.rootViewController = homeVC
+        window?.rootViewController = NavController(root: vc)
         window?.makeKeyAndVisible()
     }
 

@@ -14,7 +14,12 @@
 		ADD880852D33DCA2007572F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8807D2D33DCA2007572F8 /* SceneDelegate.swift */; };
 		ADD8808A2D33DCF8007572F8 /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD880892D33DCF8007572F8 /* HomeController.xib */; };
 		ADD8808B2D33DCF8007572F8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD880882D33DCF8007572F8 /* HomeController.swift */; };
-		ADD8808F2D33DFB2007572F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADD8808E2D33DFB2007572F8 /* GoogleService-Info.plist */; };
+		ADD880912D33EC82007572F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADD880902D33EC82007572F8 /* GoogleService-Info.plist */; };
+		ADD880952D33ED6C007572F8 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD880932D33ED6C007572F8 /* LoginController.swift */; };
+		ADD880962D33ED6C007572F8 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD880942D33ED6C007572F8 /* LoginController.xib */; };
+		ADD880992D33EED4007572F8 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD880982D33EED4007572F8 /* Shared.swift */; };
+		ADD8809B2D33F173007572F8 /* UIViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8809A2D33F173007572F8 /* UIViewController + Extensions.swift */; };
+		ADD880A02D33F58C007572F8 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8809F2D33F58C007572F8 /* NavController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +32,12 @@
 		ADD8807D2D33DCA2007572F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ADD880882D33DCF8007572F8 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		ADD880892D33DCF8007572F8 /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
-		ADD8808E2D33DFB2007572F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ADD880902D33EC82007572F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ADD880932D33ED6C007572F8 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		ADD880942D33ED6C007572F8 /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
+		ADD880982D33EED4007572F8 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		ADD8809A2D33F173007572F8 /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
+		ADD8809F2D33F58C007572F8 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		CB0993CBF863DB22948CCCB8 /* Pods-habit-tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-habit-tracker.debug.xcconfig"; path = "Target Support Files/Pods-habit-tracker/Pods-habit-tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		FE18057D3FB7D5C4B236E475 /* Pods-habit-tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-habit-tracker.release.xcconfig"; path = "Target Support Files/Pods-habit-tracker/Pods-habit-tracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,9 +93,12 @@
 			isa = PBXGroup;
 			children = (
 				ADD8808C2D33DD48007572F8 /* App */,
+				ADD8809C2D33F23E007572F8 /* Extensions */,
 				ADD880872D33DCE5007572F8 /* Scenes */,
 				ADD8808D2D33DE2B007572F8 /* Resources */,
-				ADD8808E2D33DFB2007572F8 /* GoogleService-Info.plist */,
+				ADD8809E2D33F582007572F8 /* Reuseable */,
+				ADD880972D33EECC007572F8 /* Utilities */,
+				ADD880902D33EC82007572F8 /* GoogleService-Info.plist */,
 			);
 			path = "habit-tracker";
 			sourceTree = "<group>";
@@ -93,8 +106,8 @@
 		ADD880872D33DCE5007572F8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				ADD880882D33DCF8007572F8 /* HomeController.swift */,
-				ADD880892D33DCF8007572F8 /* HomeController.xib */,
+				ADD880922D33ED54007572F8 /* Login */,
+				ADD8809D2D33F2B4007572F8 /* Home */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -116,6 +129,48 @@
 				ADD8807A2D33DCA2007572F8 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		ADD880922D33ED54007572F8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				ADD880932D33ED6C007572F8 /* LoginController.swift */,
+				ADD880942D33ED6C007572F8 /* LoginController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		ADD880972D33EECC007572F8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				ADD880982D33EED4007572F8 /* Shared.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		ADD8809C2D33F23E007572F8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ADD8809A2D33F173007572F8 /* UIViewController + Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ADD8809D2D33F2B4007572F8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				ADD880882D33DCF8007572F8 /* HomeController.swift */,
+				ADD880892D33DCF8007572F8 /* HomeController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		ADD8809E2D33F582007572F8 /* Reuseable */ = {
+			isa = PBXGroup;
+			children = (
+				ADD8809F2D33F58C007572F8 /* NavController.swift */,
+			);
+			path = Reuseable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,8 +234,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADD8808A2D33DCF8007572F8 /* HomeController.xib in Resources */,
-				ADD8808F2D33DFB2007572F8 /* GoogleService-Info.plist in Resources */,
+				ADD880912D33EC82007572F8 /* GoogleService-Info.plist in Resources */,
 				ADD880802D33DCA2007572F8 /* Assets.xcassets in Resources */,
+				ADD880962D33ED6C007572F8 /* LoginController.xib in Resources */,
 				ADD880822D33DCA2007572F8 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,7 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADD8809B2D33F173007572F8 /* UIViewController + Extensions.swift in Sources */,
+				ADD880A02D33F58C007572F8 /* NavController.swift in Sources */,
+				ADD880992D33EED4007572F8 /* Shared.swift in Sources */,
 				ADD8808B2D33DCF8007572F8 /* HomeController.swift in Sources */,
+				ADD880952D33ED6C007572F8 /* LoginController.swift in Sources */,
 				ADD880842D33DCA2007572F8 /* AppDelegate.swift in Sources */,
 				ADD880852D33DCA2007572F8 /* SceneDelegate.swift in Sources */,
 			);

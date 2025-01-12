@@ -26,5 +26,7 @@
 	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:445714652925:ios:65a74a79f224e34370e894</string>
+	<key>DATABASE_URL</key>
+	<string>https://habit-tracker-4833d-default-rtdb.europe-west1.firebasedatabase.app</string>
 </dict>
 </plist>
