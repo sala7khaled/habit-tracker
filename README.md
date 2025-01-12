@@ -54,6 +54,26 @@ FirebaseManager.shared.addHabit(habitTitle: "Exercise") { error in
 
 ---
 
+
+## Data Structure 
+
+```bash
+users
+  └── userId
+       ├── habits
+       │     ├── habitId
+       │     │     ├── name: "Running"
+       │     │     └── ...
+       └── progress
+             ├── DD-MM-YYYY
+             │     ├── habitId1: true
+             │     ├── habitId2: false
+             └     └── ...
+```
+
+---
+
+
 ## Contact
 
 Created by Salah Khaled. Feel free to reach out for collaboration.
