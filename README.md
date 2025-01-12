@@ -39,7 +39,7 @@ Centralized class to handle all Firebase operations, including:
 - Adding habits
 - Fetching all habits
 - Completing habits
-- Deleting habits and associated progress
+- Deleting habits
 
 #### Example
 ```swift
