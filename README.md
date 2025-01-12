@@ -52,25 +52,6 @@ FirebaseManager.shared.addHabit(habitTitle: "Exercise") { error in
 }
 ```
 
-### Swipe to Delete
-Implemented in the `HomeController` to allow users to delete habits with a swipe gesture.
-
-#### Example
-```swift
-func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-    if editingStyle == .delete {
-        let habit = viewModel.getHabit(at: indexPath.row)
-        viewModel.deleteHabit(habitId: habit.id) { [weak self] error in
-            if let error = error {
-                self?.showAlert(title: "Error", message: error)
-            } else {
-                self?.removeHabitFromList(at: indexPath)
-            }
-        }
-    }
-}
-```
-
 ---
 
 ## Contact
