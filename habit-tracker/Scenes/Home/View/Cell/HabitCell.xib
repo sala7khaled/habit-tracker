@@ -20,18 +20,18 @@
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ain-Hv-l70">
                         <rect key="frame" x="24" y="12" width="272" height="31"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="j4C-ZB-dGj">
-                                <rect key="frame" x="0.0" y="0.66666666666666607" width="89.666666666666671" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="j4C-ZB-dGj">
+                                <rect key="frame" x="0.0" y="5.6666666666666679" width="71.666666666666671" height="20"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="widget.small" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="J6M-9S-Ect">
-                                        <rect key="frame" x="0.0" y="1.3333333333333321" width="30" height="27.666666666666668"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text.quote" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="J6M-9S-Ect">
+                                        <rect key="frame" x="0.0" y="2" width="20" height="16.333333333333332"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="ZmC-oG-Y9w"/>
+                                            <constraint firstAttribute="height" constant="20" id="ZmC-oG-Y9w"/>
                                             <constraint firstAttribute="width" secondItem="J6M-9S-Ect" secondAttribute="height" id="Zmf-e2-ek7"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gda-F4-s8N">
-                                        <rect key="frame" x="50" y="5.3333333333333339" width="39.666666666666657" height="19.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gda-F4-s8N">
+                                        <rect key="frame" x="31.999999999999996" y="0.33333333333333215" width="39.666666666666657" height="19.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -68,6 +68,6 @@
     </objects>
     <resources>
         <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
-        <image name="widget.small" catalog="system" width="128" height="115"/>
+        <image name="text.quote" catalog="system" width="128" height="101"/>
     </resources>
 </document>

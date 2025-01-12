@@ -30,20 +30,42 @@ extension HomeController: UITableViewDelegateAndDataSource {
         return cell
     }
     
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] (_, _, completionHandler) in
+            guard let self = self else { return }
+            
+            let habit = self.viewModel.getHabit(at: indexPath.row)
+            
+            self.showLoading()
+            self.viewModel.deleteHabit(habitId: habit.id) { error in
+                self.hideLoading()
+                
+                if let error = error {
+                    self.showAlert(title: "Error", message: error)
+                    completionHandler(false)
+                } else {
+                    self.getHabitList()
+                    completionHandler(true)
+                }
+            }
+        }
+        
+        deleteAction.backgroundColor = .systemRed
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        configuration.performsFirstActionWithFullSwipe = true
+        return configuration
+    }
 }
-
 
 extension HomeController: HabitCellDelegate {
     func didCompleteHabit(at indexPath: IndexPath) {
         let habit = viewModel.getHabit(at: indexPath.row)
         let isCompleted = viewModel.getHabitStatus(habitId: habit.id)
         
-        showLoading()
-        
         viewModel.completeHabit(habitId: habit.id, date: "12-01-2025", status: !isCompleted) { [weak self] error in
             guard let self = self else { return }
             
-            self.hideLoading()
             if let error {
                 self.showAlert(title: "Error", message: error)
                 return

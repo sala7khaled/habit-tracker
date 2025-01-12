@@ -31,7 +31,7 @@ class HomeViewModel {
     
     func completeHabit(habitId: String, date: String, status: Bool, completion: @escaping(_ error: String?) -> Void) {
         
-        FirebaseManager.shared.markHabitCompleted(date: date, habitId: habitId, status: status) { error in
+        FirebaseManager.shared.changeHabitStatus(date: date, habitId: habitId, status: status) { error in
             if let error = error {
                 completion(error)
             } else {
@@ -54,6 +54,18 @@ class HomeViewModel {
         
     }
     
+    func deleteHabit(habitId: String, completion: @escaping (String?) -> Void) {
+        FirebaseManager.shared.deleteHabit(habitId: habitId) { error in
+            if let error = error {
+                completion(error)
+            } else {
+                self.removeHabitFromList(habitId: habitId)
+                completion(nil)
+            }
+        }
+    }
+
+    
     
     // MARK: - Helper Methods
     func habitsCount() -> Int {
@@ -67,5 +79,10 @@ class HomeViewModel {
     func getHabitStatus(habitId: String) -> Bool {
         return habitStatusList.first(where: { $0.habitId == habitId })?.isCompleted ?? false
     }
+    
+    func removeHabitFromList(habitId: String) {
+        self.habitList = self.habitList.filter { $0.id != habitId }
+    }
+
     
 }

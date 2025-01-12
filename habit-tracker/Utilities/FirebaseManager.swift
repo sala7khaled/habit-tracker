@@ -53,14 +53,14 @@ class FirebaseManager {
                 }
                 completion(habits, nil)
             } else {
-                completion(nil, "No habits found")
+                completion([], nil)
             }
         }
     }
 
     
-    /// Mark habit as completed for a specific date
-    func markHabitCompleted(date: String, habitId: String, status: Bool, completion: @escaping (String?) -> Void) {
+    /// Change habit's status for a specific date
+    func changeHabitStatus(date: String, habitId: String, status: Bool, completion: @escaping (String?) -> Void) {
         guard let username = Shared.username else {
             completion("Username is not set")
             return
@@ -73,19 +73,6 @@ class FirebaseManager {
     }
     
     /// Fetch all habits (completed + not completed) for a specific date
-//    func fetchAllHabitsStatus(forDate date: String, completion: @escaping ([String: Bool]?, String?) -> Void) {
-//        guard let username = Shared.username else {
-//            completion(nil, "Username is not set")
-//            return
-//        }
-//        databaseRef.child("users/\(username)/progress/\(date)").observe(.value) { snapshot in
-//            if let completedHabits = snapshot.value as? [String: Bool] {
-//                completion(completedHabits, nil)
-//            } else {
-//                completion(nil, "No habits found for the specified date")
-//            }
-//        }
-//    }
     func fetchAllHabitsStatus(forDate date: String, completion: @escaping ([HabitStatusModel]?, String?) -> Void) {
         guard let username = Shared.username else {
             completion(nil, "Username is not set")
@@ -96,8 +83,20 @@ class FirebaseManager {
                 let habitStatuses = HabitStatusModel.fromDictionary(completedHabits)
                 completion(habitStatuses, nil)
             } else {
-                completion(nil, "No habits found for the specified date")
+                completion([], nil)
             }
         }
     }
+    
+    /// Delete a specific habit
+    func deleteHabit(habitId: String, completion: @escaping (String?) -> Void) {
+        guard let username = Shared.username else {
+            completion("Username is not set")
+            return
+        }
+        databaseRef.child("users/\(username)/habits/\(habitId)").removeValue { error, _ in
+            completion(error?.localizedDescription)
+        }
+    }
+
 }

@@ -34,7 +34,18 @@ class HabitCell: UITableViewCell {
     
     // MARK: - Methods
     func configure(habit: HabitModel, isCompleted: Bool) {
-        titleLabel.text = habit.title
+        if isCompleted {
+            let attributedString = NSAttributedString(
+                string: habit.title,
+                attributes: [
+                    .strikethroughStyle: NSUnderlineStyle.single.rawValue,
+                    .foregroundColor: UIColor.systemGray
+                ]
+            )
+            titleLabel.attributedText = attributedString
+        } else {
+            titleLabel.attributedText = NSAttributedString(string: habit.title)
+        }
         
         completeButton.tintColor = isCompleted ? .systemGreen : .lightGray
         completeButton.setImage(UIImage(systemName: isCompleted ? "checkmark.square.fill" : "square"), for: .normal)

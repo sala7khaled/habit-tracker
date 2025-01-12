@@ -13,6 +13,7 @@ class HomeController: BaseController {
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var emptyStack: UIStackView!
     
     
     // MARK: - Properties
@@ -30,7 +31,7 @@ class HomeController: BaseController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        getHabitList()
+        getHabitList(firstLoad: true)
     }
     
     
@@ -50,9 +51,12 @@ class HomeController: BaseController {
     }
     
     
-    func getHabitList() {
+    func getHabitList(firstLoad: Bool = false) {
         
-        showLoading()
+        if firstLoad {
+            showLoading()
+        }
+        
         viewModel.getHabitList { [weak self] error in
             guard let self = self else { return }
             
@@ -62,7 +66,7 @@ class HomeController: BaseController {
                 return
             }
             // Handle Success
-            tableView.reloadData()
+            reloadData()
         }
         
         viewModel.getHabitStatusList(date: "12-01-2025") { [weak self] error in
@@ -74,8 +78,15 @@ class HomeController: BaseController {
                 return
             }
             // Handle Success
-            tableView.reloadData()
+            reloadData()
         }
+        
+        
+    }
+    
+    func reloadData() {
+        tableView.reloadData()
+        emptyStack.isHidden = viewModel.habitsCount() > 0
     }
     
 

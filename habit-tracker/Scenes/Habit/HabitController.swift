@@ -65,10 +65,7 @@ class HabitController: UIViewController {
             if let error = error {
                 self.showAlert(title: "Error", message: error)
             } else {
-                print("")
-                self.showActionAlert(title: "Success", message: "Habit added successfully") {
-                    self.dismissController()
-                }
+                self.dismissController()
             }
         }
 

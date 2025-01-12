@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeController" customModule="habit_tracker" customModuleProvider="target">
             <connections>
+                <outlet property="emptyStack" destination="WX3-MS-09h" id="a5N-Z1-Ajg"/>
                 <outlet property="tableView" destination="ZtA-wN-b9r" id="b7D-tt-oQa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,25 +21,69 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZtA-wN-b9r">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cD1-ao-qWt">
                     <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZtA-wN-b9r">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                        <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WX3-MS-09h">
+                            <rect key="frame" x="39.333333333333343" y="337.33333333333331" width="314.33333333333326" height="118.66666666666669"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="widget.small.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RhE-kj-cuc">
+                                    <rect key="frame" x="127.33333333333331" y="-1.3333333333333357" width="62.666666666666686" height="60.333333333333336"/>
+                                    <color key="tintColor" systemColor="systemRedColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="RhE-kj-cuc" secondAttribute="height" id="C0G-oL-jkq"/>
+                                        <constraint firstAttribute="height" constant="60" id="ydE-M8-Vtg"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty habits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6a-6y-Ffq">
+                                    <rect key="frame" x="106.33333333333331" y="70" width="102" height="19.333333333333329"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try adding a new habits via plus button" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CML-EQ-OiZ">
+                                    <rect key="frame" x="15.666666666666657" y="99.333333333333371" width="283" height="19.333333333333329"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
+                    <constraints>
+                        <constraint firstItem="ZtA-wN-b9r" firstAttribute="leading" secondItem="cD1-ao-qWt" secondAttribute="leading" id="8Uz-Ev-4mu"/>
+                        <constraint firstAttribute="bottom" secondItem="ZtA-wN-b9r" secondAttribute="bottom" id="9Hd-C6-mDB"/>
+                        <constraint firstItem="WX3-MS-09h" firstAttribute="centerY" secondItem="cD1-ao-qWt" secondAttribute="centerY" id="G3Z-Se-eIP"/>
+                        <constraint firstItem="WX3-MS-09h" firstAttribute="width" secondItem="cD1-ao-qWt" secondAttribute="width" multiplier="0.8" id="Nh2-pE-OFR"/>
+                        <constraint firstAttribute="trailing" secondItem="ZtA-wN-b9r" secondAttribute="trailing" id="Ynj-ND-kK5"/>
+                        <constraint firstItem="ZtA-wN-b9r" firstAttribute="top" secondItem="cD1-ao-qWt" secondAttribute="top" id="diK-bz-iw8"/>
+                        <constraint firstItem="WX3-MS-09h" firstAttribute="centerX" secondItem="cD1-ao-qWt" secondAttribute="centerX" id="zn7-Pf-wQ8"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="ZtA-wN-b9r" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="13I-cM-7rX"/>
-                <constraint firstAttribute="bottom" secondItem="ZtA-wN-b9r" secondAttribute="bottom" id="K0j-CZ-FJ6"/>
-                <constraint firstItem="ZtA-wN-b9r" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZQU-z6-fKQ"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZtA-wN-b9r" secondAttribute="trailing" id="qtb-AS-zfS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cD1-ao-qWt" secondAttribute="trailing" id="8NR-kM-fLR"/>
+                <constraint firstItem="cD1-ao-qWt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Bpl-bW-FYi"/>
+                <constraint firstAttribute="bottom" secondItem="cD1-ao-qWt" secondAttribute="bottom" id="Ub4-dE-SIQ"/>
+                <constraint firstItem="cD1-ao-qWt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="tjj-4P-yf7"/>
             </constraints>
-            <point key="canvasLocation" x="112" y="20"/>
+            <point key="canvasLocation" x="110.68702290076335" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <image name="widget.small.badge.plus" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
