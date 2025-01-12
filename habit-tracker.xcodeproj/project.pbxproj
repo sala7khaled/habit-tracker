@@ -3,19 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32D01F1769D0B6A9FBB3114E /* Pods_habit_tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5C08DD285B982E7E9DEB52 /* Pods_habit_tracker.framework */; };
 		ADD880802D33DCA2007572F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADD880772D33DCA2007572F8 /* Assets.xcassets */; };
 		ADD880822D33DCA2007572F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD8807A2D33DCA2007572F8 /* LaunchScreen.storyboard */; };
 		ADD880842D33DCA2007572F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD880762D33DCA2007572F8 /* AppDelegate.swift */; };
 		ADD880852D33DCA2007572F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8807D2D33DCA2007572F8 /* SceneDelegate.swift */; };
 		ADD8808A2D33DCF8007572F8 /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD880892D33DCF8007572F8 /* HomeController.xib */; };
 		ADD8808B2D33DCF8007572F8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD880882D33DCF8007572F8 /* HomeController.swift */; };
+		ADD8808F2D33DFB2007572F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADD8808E2D33DFB2007572F8 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E5C08DD285B982E7E9DEB52 /* Pods_habit_tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_habit_tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD8805E2D33DC83007572F8 /* habit-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "habit-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD880762D33DCA2007572F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADD880772D33DCA2007572F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		ADD8807D2D33DCA2007572F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ADD880882D33DCF8007572F8 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		ADD880892D33DCF8007572F8 /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
+		ADD8808E2D33DFB2007572F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CB0993CBF863DB22948CCCB8 /* Pods-habit-tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-habit-tracker.debug.xcconfig"; path = "Target Support Files/Pods-habit-tracker/Pods-habit-tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		FE18057D3FB7D5C4B236E475 /* Pods-habit-tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-habit-tracker.release.xcconfig"; path = "Target Support Files/Pods-habit-tracker/Pods-habit-tracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32D01F1769D0B6A9FBB3114E /* Pods_habit_tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C81E956FC281453717567B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB0993CBF863DB22948CCCB8 /* Pods-habit-tracker.debug.xcconfig */,
+				FE18057D3FB7D5C4B236E475 /* Pods-habit-tracker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A088BE1FE61D8D6D812421CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E5C08DD285B982E7E9DEB52 /* Pods_habit_tracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ADD880552D33DC82007572F8 = {
 			isa = PBXGroup;
 			children = (
 				ADD8807F2D33DCA2007572F8 /* habit-tracker */,
 				ADD8805F2D33DC83007572F8 /* Products */,
+				4C81E956FC281453717567B4 /* Pods */,
+				A088BE1FE61D8D6D812421CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +85,7 @@
 				ADD8808C2D33DD48007572F8 /* App */,
 				ADD880872D33DCE5007572F8 /* Scenes */,
 				ADD8808D2D33DE2B007572F8 /* Resources */,
+				ADD8808E2D33DFB2007572F8 /* GoogleService-Info.plist */,
 			);
 			path = "habit-tracker";
 			sourceTree = "<group>";
@@ -98,17 +125,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADD880712D33DC84007572F8 /* Build configuration list for PBXNativeTarget "habit-tracker" */;
 			buildPhases = (
+				915957A82710BB869A2D9C27 /* [CP] Check Pods Manifest.lock */,
 				ADD8805A2D33DC83007572F8 /* Sources */,
 				ADD8805B2D33DC83007572F8 /* Frameworks */,
 				ADD8805C2D33DC83007572F8 /* Resources */,
+				9A7ACA1A1D66EC9588B275CB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "habit-tracker";
-			packageProductDependencies = (
-			);
 			productName = "habit-tracker";
 			productReference = ADD8805E2D33DC83007572F8 /* habit-tracker.app */;
 			productType = "com.apple.product-type.application";
@@ -129,6 +156,7 @@
 				};
 			};
 			buildConfigurationList = ADD880592D33DC82007572F8 /* Build configuration list for PBXProject "habit-tracker" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -136,8 +164,6 @@
 				Base,
 			);
 			mainGroup = ADD880552D33DC82007572F8;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = ADD8805F2D33DC83007572F8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -153,12 +179,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADD8808A2D33DCF8007572F8 /* HomeController.xib in Resources */,
+				ADD8808F2D33DFB2007572F8 /* GoogleService-Info.plist in Resources */,
 				ADD880802D33DCA2007572F8 /* Assets.xcassets in Resources */,
 				ADD880822D33DCA2007572F8 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		915957A82710BB869A2D9C27 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-habit-tracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A7ACA1A1D66EC9588B275CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-habit-tracker/Pods-habit-tracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-habit-tracker/Pods-habit-tracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-habit-tracker/Pods-habit-tracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ADD8805A2D33DC83007572F8 /* Sources */ = {
@@ -187,11 +256,14 @@
 /* Begin XCBuildConfiguration section */
 		ADD880722D33DC84007572F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB0993CBF863DB22948CCCB8 /* Pods-habit-tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "habit-tracker/Resources/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Habit Tracker";
@@ -218,11 +290,14 @@
 		};
 		ADD880732D33DC84007572F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE18057D3FB7D5C4B236E475 /* Pods-habit-tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "habit-tracker/Resources/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Habit Tracker";
