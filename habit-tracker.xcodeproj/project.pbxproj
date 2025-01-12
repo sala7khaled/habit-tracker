@@ -6,30 +6,25 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		ADD880802D33DCA2007572F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADD880772D33DCA2007572F8 /* Assets.xcassets */; };
+		ADD880822D33DCA2007572F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD8807A2D33DCA2007572F8 /* LaunchScreen.storyboard */; };
+		ADD880842D33DCA2007572F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD880762D33DCA2007572F8 /* AppDelegate.swift */; };
+		ADD880852D33DCA2007572F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD8807D2D33DCA2007572F8 /* SceneDelegate.swift */; };
+		ADD8808A2D33DCF8007572F8 /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD880892D33DCF8007572F8 /* HomeController.xib */; };
+		ADD8808B2D33DCF8007572F8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD880882D33DCF8007572F8 /* HomeController.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		ADD8805E2D33DC83007572F8 /* habit-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "habit-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADD880762D33DCA2007572F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ADD880772D33DCA2007572F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADD880782D33DCA2007572F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADD880792D33DCA2007572F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ADD8807D2D33DCA2007572F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		ADD880882D33DCF8007572F8 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		ADD880892D33DCF8007572F8 /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		ADD880702D33DC84007572F8 /* Exceptions for "habit-tracker" folder in "habit-tracker" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = ADD8805D2D33DC83007572F8 /* habit-tracker */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		ADD880602D33DC83007572F8 /* habit-tracker */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				ADD880702D33DC84007572F8 /* Exceptions for "habit-tracker" folder in "habit-tracker" target */,
-			);
-			path = "habit-tracker";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		ADD8805B2D33DC83007572F8 /* Frameworks */ = {
@@ -45,7 +40,7 @@
 		ADD880552D33DC82007572F8 = {
 			isa = PBXGroup;
 			children = (
-				ADD880602D33DC83007572F8 /* habit-tracker */,
+				ADD8807F2D33DCA2007572F8 /* habit-tracker */,
 				ADD8805F2D33DC83007572F8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +51,44 @@
 				ADD8805E2D33DC83007572F8 /* habit-tracker.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		ADD8807F2D33DCA2007572F8 /* habit-tracker */ = {
+			isa = PBXGroup;
+			children = (
+				ADD8808C2D33DD48007572F8 /* App */,
+				ADD880872D33DCE5007572F8 /* Scenes */,
+				ADD8808D2D33DE2B007572F8 /* Resources */,
+			);
+			path = "habit-tracker";
+			sourceTree = "<group>";
+		};
+		ADD880872D33DCE5007572F8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				ADD880882D33DCF8007572F8 /* HomeController.swift */,
+				ADD880892D33DCF8007572F8 /* HomeController.xib */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		ADD8808C2D33DD48007572F8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				ADD880762D33DCA2007572F8 /* AppDelegate.swift */,
+				ADD8807D2D33DCA2007572F8 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		ADD8808D2D33DE2B007572F8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ADD880772D33DCA2007572F8 /* Assets.xcassets */,
+				ADD880782D33DCA2007572F8 /* Info.plist */,
+				ADD8807A2D33DCA2007572F8 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +105,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				ADD880602D33DC83007572F8 /* habit-tracker */,
 			);
 			name = "habit-tracker";
 			packageProductDependencies = (
@@ -122,6 +152,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADD8808A2D33DCF8007572F8 /* HomeController.xib in Resources */,
+				ADD880802D33DCA2007572F8 /* Assets.xcassets in Resources */,
+				ADD880822D33DCA2007572F8 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +165,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADD8808B2D33DCF8007572F8 /* HomeController.swift in Sources */,
+				ADD880842D33DCA2007572F8 /* AppDelegate.swift in Sources */,
+				ADD880852D33DCA2007572F8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ADD8807A2D33DCA2007572F8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADD880792D33DCA2007572F8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		ADD880722D33DC84007572F8 /* Debug */ = {
@@ -146,12 +193,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "habit-tracker/Info.plist";
+				INFOPLIST_FILE = "habit-tracker/Resources/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Habit Tracker";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -159,6 +206,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sala7khaled.habit-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -173,12 +224,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "habit-tracker/Info.plist";
+				INFOPLIST_FILE = "habit-tracker/Resources/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Habit Tracker";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -186,6 +237,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sala7khaled.habit-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
