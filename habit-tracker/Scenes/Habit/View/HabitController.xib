@@ -49,7 +49,7 @@
                                 <constraint firstAttribute="height" constant="40" id="ZKL-nZ-hft"/>
                             </constraints>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Add" cornerStyle="capsule"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Create habit" cornerStyle="capsule"/>
                             <connections>
                                 <action selector="addHabitButtonClicked:" destination="-1" eventType="touchUpInside" id="8FL-Vx-W1l"/>
                             </connections>
