@@ -59,5 +59,5 @@ FirebaseManager.shared.addHabit(habitTitle: "Exercise") { error in
 Created by Salah Khaled. Feel free to reach out for collaboration.
 
 - **Email:** sala7khalad@gmail.com
-- **LinkedIn:** [Salah Khaled](https://linkedin.com/in/sala7khalaed)
+- **LinkedIn:** [Salah Khaled](https://linkedin.com/in/sala7khaled)
 
