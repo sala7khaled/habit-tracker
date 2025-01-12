@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		32D01F1769D0B6A9FBB3114E /* Pods_habit_tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5C08DD285B982E7E9DEB52 /* Pods_habit_tracker.framework */; };
+		ADA61B1A2D343762004BDB6E /* Home + DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA61B192D343762004BDB6E /* Home + DatePicker.swift */; };
+		ADA61B1E2D34422B004BDB6E /* HabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA61B1D2D34422A004BDB6E /* HabitViewModel.swift */; };
 		ADD880802D33DCA2007572F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADD880772D33DCA2007572F8 /* Assets.xcassets */; };
 		ADD880822D33DCA2007572F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD8807A2D33DCA2007572F8 /* LaunchScreen.storyboard */; };
 		ADD880842D33DCA2007572F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD880762D33DCA2007572F8 /* AppDelegate.swift */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		7E5C08DD285B982E7E9DEB52 /* Pods_habit_tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_habit_tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA61B192D343762004BDB6E /* Home + DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home + DatePicker.swift"; sourceTree = "<group>"; };
+		ADA61B1D2D34422A004BDB6E /* HabitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewModel.swift; sourceTree = "<group>"; };
 		ADD8805E2D33DC83007572F8 /* habit-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "habit-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD880762D33DCA2007572F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADD880772D33DCA2007572F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +99,23 @@
 				7E5C08DD285B982E7E9DEB52 /* Pods_habit_tracker.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ADA61B1B2D344215004BDB6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADD880A22D33F8A1007572F8 /* HabitController.swift */,
+				ADD880A32D33F8A1007572F8 /* HabitController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ADA61B1C2D34421A004BDB6E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ADA61B1D2D34422A004BDB6E /* HabitViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		ADD880552D33DC82007572F8 = {
@@ -208,8 +229,8 @@
 		ADD880A12D33F824007572F8 /* Habit */ = {
 			isa = PBXGroup;
 			children = (
-				ADD880A22D33F8A1007572F8 /* HabitController.swift */,
-				ADD880A32D33F8A1007572F8 /* HabitController.xib */,
+				ADA61B1C2D34421A004BDB6E /* ViewModel */,
+				ADA61B1B2D344215004BDB6E /* View */,
 			);
 			path = Habit;
 			sourceTree = "<group>";
@@ -228,6 +249,7 @@
 			children = (
 				ADD880A82D33FE03007572F8 /* Cell */,
 				ADD880A92D33FE0D007572F8 /* Home + TableView.swift */,
+				ADA61B192D343762004BDB6E /* Home + DatePicker.swift */,
 				ADD880882D33DCF8007572F8 /* HomeController.swift */,
 				ADD880892D33DCF8007572F8 /* HomeController.xib */,
 			);
@@ -380,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADA61B1E2D34422B004BDB6E /* HabitViewModel.swift in Sources */,
 				ADD8809B2D33F173007572F8 /* UIViewController + Extensions.swift in Sources */,
 				ADD880B02D33FF06007572F8 /* UITableView + Extensions.swift in Sources */,
 				ADD880A02D33F58C007572F8 /* NavController.swift in Sources */,
@@ -392,6 +415,7 @@
 				ADD880BB2D340971007572F8 /* LoadingController.swift in Sources */,
 				ADD880842D33DCA2007572F8 /* AppDelegate.swift in Sources */,
 				ADD880B52D3407D6007572F8 /* HomeViewModel.swift in Sources */,
+				ADA61B1A2D343762004BDB6E /* Home + DatePicker.swift in Sources */,
 				ADD880AA2D33FE0D007572F8 /* Home + TableView.swift in Sources */,
 				ADD880C22D3422AD007572F8 /* HabitStatusModel.swift in Sources */,
 				ADD880C02D340B7A007572F8 /* HabitModel.swift in Sources */,

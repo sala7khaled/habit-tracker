@@ -63,7 +63,7 @@ extension HomeController: HabitCellDelegate {
         let habit = viewModel.getHabit(at: indexPath.row)
         let isCompleted = viewModel.getHabitStatus(habitId: habit.id)
         
-        viewModel.completeHabit(habitId: habit.id, date: "12-01-2025", status: !isCompleted) { [weak self] error in
+        viewModel.completeHabit(habitId: habit.id, status: !isCompleted) { [weak self] error in
             guard let self = self else { return }
             
             if let error {

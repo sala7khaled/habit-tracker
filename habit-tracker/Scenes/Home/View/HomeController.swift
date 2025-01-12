@@ -13,11 +13,14 @@ class HomeController: BaseController {
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var emptyStack: UIStackView!
+    @IBOutlet weak var habitsLabel: UILabel!
     
     
     // MARK: - Properties
     let viewModel = HomeViewModel()
+    let dateFormatter = DateFormatter()
     
     
     // MARK: - Life Cycle
@@ -26,6 +29,7 @@ class HomeController: BaseController {
 
         setupViews()
         setupTableView()
+        setupDatePicker()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +44,7 @@ class HomeController: BaseController {
         super.viewDidLoad()
         
         title = "Habit Tracker"
+        habitsLabel.text = Shared.username != nil ? "\(Shared.username ?? "")'s habits" : "Habits"
         
         let habitButton = UIBarButtonItem(image: UIImage(systemName: "plus.circle.fill"), style: .plain, target: self, action: #selector(navigateToHabit))
         navigationItem.rightBarButtonItem = habitButton
@@ -69,7 +74,7 @@ class HomeController: BaseController {
             reloadData()
         }
         
-        viewModel.getHabitStatusList(date: "12-01-2025") { [weak self] error in
+        viewModel.getHabitStatusList { [weak self] error in
             guard let self = self else { return }
             
             self.hideLoading()
@@ -89,8 +94,5 @@ class HomeController: BaseController {
         emptyStack.isHidden = viewModel.habitsCount() > 0
     }
     
-
-    // MARK: - Actions
-
 
 }

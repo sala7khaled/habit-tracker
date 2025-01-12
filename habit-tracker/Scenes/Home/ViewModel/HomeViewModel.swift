@@ -13,6 +13,7 @@ class HomeViewModel {
     // MARK: - Properties
     private var habitList = [HabitModel]()
     private var habitStatusList = [HabitStatusModel]()
+    private var selectedDate = ""
     
     
     // MARK: - Firebase Realtime
@@ -29,9 +30,9 @@ class HomeViewModel {
     }
 
     
-    func completeHabit(habitId: String, date: String, status: Bool, completion: @escaping(_ error: String?) -> Void) {
+    func completeHabit(habitId: String, status: Bool, completion: @escaping(_ error: String?) -> Void) {
         
-        FirebaseManager.shared.changeHabitStatus(date: date, habitId: habitId, status: status) { error in
+        FirebaseManager.shared.changeHabitStatus(date: selectedDate, habitId: habitId, status: status) { error in
             if let error = error {
                 completion(error)
             } else {
@@ -41,9 +42,9 @@ class HomeViewModel {
 
     }
     
-    func getHabitStatusList(date: String, completion: @escaping(_ error: String?) -> Void) {
+    func getHabitStatusList(completion: @escaping(_ error: String?) -> Void) {
         
-        FirebaseManager.shared.fetchAllHabitsStatus(forDate: date) { habitStatus, error in
+        FirebaseManager.shared.fetchAllHabitsStatus(forDate: selectedDate) { habitStatus, error in
             if let error = error {
                 completion(error)
             } else if let habitStatus = habitStatus {
@@ -82,6 +83,10 @@ class HomeViewModel {
     
     func removeHabitFromList(habitId: String) {
         self.habitList = self.habitList.filter { $0.id != habitId }
+    }
+    
+    func setCurrentDate(_ date: String) {
+        selectedDate = date
     }
 
     

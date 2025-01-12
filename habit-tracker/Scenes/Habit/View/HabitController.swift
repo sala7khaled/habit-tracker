@@ -7,13 +7,14 @@
 
 import UIKit
 
-class HabitController: UIViewController {
+class HabitController: BaseController {
     
     // MARK: - Outlets
     @IBOutlet weak var habitTextfield: UITextField!
     
     
     // MARK: - Properties
+    let viewModel = HabitViewModel()
     
     
     // MARK: - Life Cycle
@@ -61,13 +62,19 @@ class HabitController: UIViewController {
             return
         }
         
-        FirebaseManager.shared.addHabit(habitTitle: habitTextfield.text ?? "") { error in
-            if let error = error {
+        self.showLoading()
+        
+        viewModel.addHabit(title: habitTextfield.text ?? "") { [weak self] error in
+            guard let self = self else { return }
+            
+            self.hideLoading()
+            if let error {
                 self.showAlert(title: "Error", message: error)
-            } else {
-                self.dismissController()
+                return
             }
+            dismissController()
         }
+        
 
     }
     
